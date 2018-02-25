@@ -227,11 +227,11 @@ Benchmark.bm do |x|
 
 		aunts = sues.select do |sue|
 
-			sue.each do |s_key, s_value|
+			sue.each do |key, value|
 
-				next if s_key == :name
+				next if key == :name
 
-				if description[s_key] != s_value
+				if description[key] != value
 				  break false
 				end
 
