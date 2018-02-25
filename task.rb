@@ -215,7 +215,7 @@ sues = [
 	{name: 'Sue 200', vizslas: 4, cats: 0, akitas: 9}
 ]
 
-30.times { sues += sues }
+10.times { sues += sues }
 
 require 'benchmark'
 
@@ -231,16 +231,14 @@ Benchmark.bm do |x|
 
 				next if s_key == :name
 
-				value = description[s_key]
-
-				if value == nil || value != s_value
-					break false
+				if description[s_key] != s_value
+				  break false
 				end
 
 			end
 
 		end
-  }
+	}
 end
 
 puts aunts[0]
